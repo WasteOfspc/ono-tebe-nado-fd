@@ -1,31 +1,22 @@
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  height: 293px;
-  padding: 0 50px 6px;
+  padding: 92px 50px 96px;
   font-size: 18px;
-}
-
-.header__menu {
-  justify-self: start;
 }
 
 .header__links-list {
   display: flex;
   list-style: circle;
   line-height: 21px;
-  gap: 11px;
-}
-
-.header__link--padding-right {
-  padding-right: 24px;
+  gap: 32px;
 }
 
 .header__links-list-item--no-bullit {
   list-style-type: none;
   padding-left: 0;
-  padding-right: 21px;
 }
 
 .link {
@@ -39,7 +30,7 @@
 }
 
 .header__logo {
-  height: 105px;
+  max-height: 105px;
 }
 
 .header__logo-image {
@@ -58,36 +49,36 @@
 
 .header__address {
   justify-self: flex-end;
-  padding-right: 35px;
+  padding-right: 37px;
 }
 
 .cover {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 1fr;
   position: relative;
   min-height: 757px;
-  background-image: url("../images/cover.jpg");
+  background-image: url('../images/cover.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .overlay {
   position: absolute;
-  z-index: 0;
+  inset: 0;
+  z-index: 1;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
-  padding: 165px 20px 106px 50px;
+  position: relative;
   text-transform: uppercase;
+  padding: 165px 20px 106px 50px;
   line-height: 115px;
   font-weight: 700;
   font-size: 100px;
   letter-spacing: 0.3em;
   color: #fff;
+  z-index: 2;
 }
 
 .aligned-text {
@@ -107,12 +98,14 @@
 .cover__description {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  position: relative;
+  padding: 0 50px 50px;
   text-transform: uppercase;
   word-spacing: 0.84em;
   line-height: 28px;
   font-size: 22px;
   color: #fff;
+  z-index: 2;
 }
 
 .cover__description-text {
@@ -161,6 +154,8 @@
   justify-content: space-between;
   position: relative;
   height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
@@ -182,21 +177,16 @@
 }
 
 .card_type_film {
-  background-image: url("../images/card-lot-01.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/card-lot-01.jpg');
 }
 
 .card_type_book {
-  background: url("../images/card-lot-02.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/card-lot-02.jpg');
+
 }
 
 .card_type_picture {
-  background: url("../images/card-lot-03.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/card-lot-03.jpg');
 }
 
 .lots__look-more-link {
